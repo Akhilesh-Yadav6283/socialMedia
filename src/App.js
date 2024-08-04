@@ -1,18 +1,17 @@
-// src/App.js
 import React from 'react';
-import { HashRouter as Router, Route, Routes } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Home from './components/Home';
-import PostDetail from './components/PostDetail';
+import Detail from './components/Detail';
 
-const App = () => {
+function App() {
   return (
-    <Router>
+    <div className="App">
       <Routes>
-        <Route path="/" Component={<Home />} />
-        <Route path="/item/:id" Component={<PostDetail />} />  
+        <Route path="/" element={<Home />} />
+        <Route path="/item/:id" element={<Detail />} />
       </Routes>
-    </Router>
+    </div>
   );
-};
+}
 
 export default App;
