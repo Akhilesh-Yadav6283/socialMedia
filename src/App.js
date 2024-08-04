@@ -1,17 +1,18 @@
+// src/App.js
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './components/Home';
 import Detail from './components/Detail';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
+    <Router>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/item/:id" element={<Detail />} />
       </Routes>
-    </div>
+    </Router>
   );
-}
+};
 
 export default App;
